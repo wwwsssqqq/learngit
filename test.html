@@ -1,0 +1,55 @@
+<!dctype html>
+<html>
+	<head>
+		<meta charset='TUF-8' />
+		<script src="./vue/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/demo.css"/>
+        <script language="javascript" type="text/javascript" src="./js/test.js"></script>
+	</head>
+	<body>
+		<div id="app">
+		  {{ msg }}
+		</div>
+ 		<div id="app-2">
+ 			<span v-bind:title="message">鼠标悬停几秒查看此处动态绑定的提示信息！</span>
+ 		</div>
+ 		<div id="app-3">
+ 			<p v-if="seen">现在你看到wsq了！</p>
+ 		</div>
+ 		<div id="app-4">
+ 			<ol>
+ 				<li v-for="todo in todos">
+ 					{{todo.text}}
+ 				</li>
+ 			</ol>
+ 		</div>
+ 		<div id="app-5">
+ 			<p>{{message}}</p>
+ 			<input v-model="message" />
+ 		</div>
+ 		<div id="app-6">
+ 			<p>{{message}}</p>
+ 			<button v-on:click="reverseMessage">逆转消息</button>
+ 		</div>
+        <div id="app-7">
+	 		<span>Multiline message is:</span>
+			<p style="white-space: pre-line">{{ message }}</p>
+			<br>
+			<textarea v-model="message" placeholder="add multiple lines"></textarea>
+		</div>
+		<div id="app-8">
+			<select v-model="selected">
+				<option v-for="option in options" v-bind:value="option.value">{{option.text}}</option>
+			</select>
+			<span>Selected:{{selected}}</span>
+		</div>
+
+		<div id="app-9">
+			<button @click="show=!show" >toggle show</button>
+			<transition name="bounce">
+				<p v-if="show">look at me!</p>
+			</transition>
+		</div>
+        <div id="hook-arguments-example" v-demo:foo.a.b="message"></div>
+	</body>
+</html>
