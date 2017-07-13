@@ -115,6 +115,18 @@ var app10 = new Vue({
 	}
 });
 
+//计算属性
+var exam = new Vue({
+	el:'#example',
+	data:{
+		message:'hello!'
+	},
+	computed:{
+		reverseMessage: function () {
+			return this.message.split('').reverse().join('')
+		}
+	}
+})
 
 
 }
