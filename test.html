@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset='TUF-8' />
-		<script src="./vue/vue.js"></script>
+		<script src="./vue/vue"></script>
         <link rel="stylesheet" type="text/css" href="./css/demo.css"/>
         <script language="javascript" type="text/javascript" src="./js/test.js"></script>
 	</head>
@@ -51,5 +51,15 @@
 			</transition>
 		</div>
         <div id="hook-arguments-example" v-demo:foo.a.b="message"></div>
+        <div id="app-10">
+        	<ul>
+        		<todo-item 
+        		v-for="item in groceryList"
+        		v-bind:todo="item"
+                v-bind:key="item.id">
+        			
+        		</todo-item>
+        	</ul>
+        </div>
 	</body>
 </html>
