@@ -128,5 +128,19 @@ var exam = new Vue({
 	}
 })
 
+new Vue({
+	el:'#transition-components-demo',
+	data:{
+		view:'v-a'
+	},
+	components:{
+		'v-a':{
+            template:'<div>Components A</div>'
+		},
+		'V-B':{
+			templata:'<div>Components B</div>'
+		}
+	}
+});
 
 }

@@ -65,5 +65,8 @@
         	<p>Original message:{{message}}</p>
         	<p>Computed reversed message:{{reverseMessage}}</p>
         </div>
+        <transition id="transition-components-demo" name="component-fade" made="out-in">
+        	<component v-bind:is="view"></component>
+        </transition>
 	</body>
 </html>
